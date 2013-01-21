@@ -1,0 +1,340 @@
+VERSION 5.00
+Begin VB.PropertyPage ppGrdButton 
+   Caption         =   "Miscellaneous"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5715
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3495
+   ScaleWidth      =   5715
+   Begin VB.Frame fmePosition 
+      Caption         =   "Image - Caption Order"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1395
+      Left            =   2400
+      TabIndex        =   6
+      Top             =   1140
+      Width           =   3135
+      Begin VB.ListBox lstOrder 
+         Height          =   1035
+         ItemData        =   "GrdBttn.pgx":0000
+         Left            =   120
+         List            =   "GrdBttn.pgx":0010
+         TabIndex        =   7
+         Top             =   270
+         Width           =   2895
+      End
+   End
+   Begin VB.Frame fmeCaption 
+      Caption         =   "Caption"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   975
+      Left            =   2400
+      TabIndex        =   4
+      Top             =   120
+      Width           =   3135
+      Begin VB.TextBox txtCaption 
+         Height          =   675
+         Left            =   120
+         MultiLine       =   -1  'True
+         TabIndex        =   5
+         Top             =   240
+         Width           =   2895
+      End
+   End
+   Begin VB.Frame fmeAngle 
+      Caption         =   "Gradient Angle"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2415
+      Left            =   240
+      TabIndex        =   0
+      Top             =   120
+      Width           =   1935
+      Begin VB.PictureBox picDraw 
+         Height          =   1455
+         Left            =   135
+         ScaleHeight     =   1395
+         ScaleWidth      =   1500
+         TabIndex        =   8
+         Top             =   660
+         Width           =   1560
+      End
+      Begin VB.HScrollBar hsbAngle 
+         Height          =   200
+         LargeChange     =   10
+         Left            =   120
+         Max             =   359
+         TabIndex        =   1
+         Top             =   2160
+         Width           =   1620
+      End
+      Begin VB.Label lblAngle 
+         Alignment       =   2  'Center
+         BackColor       =   &H8000000D&
+         BorderStyle     =   1  'Fixed Single
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H8000000E&
+         Height          =   375
+         Left            =   135
+         TabIndex        =   3
+         Top             =   240
+         Width           =   1590
+      End
+   End
+   Begin VB.Label lblWarning 
+      ForeColor       =   &H000000FF&
+      Height          =   855
+      Left            =   270
+      TabIndex        =   2
+      Top             =   2640
+      Width           =   5295
+   End
+End
+Attribute VB_Name = "ppGrdButton"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+
+Private Const PI    As Double = 3.14159265358979
+Private Const RADS  As Double = PI / 180    '<Degrees> * RADS = radians
+
+Private Type POINTAPI   'API Point structure
+    X   As Long
+    Y   As Long
+End Type
+
+Private Declare Function Polygon& _
+                Lib "gdi32" ( _
+                ByVal hdc As Long, _
+                lpPoint As POINTAPI, _
+                ByVal nCount As Long)
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+                   
+Private mGradient       As New clsGradient
+Private miAngle         As Integer
+Private bShowMsg        As Boolean
+
+Private bAngleChanged   As Boolean
+Private bCaptionChanged As Boolean
+Private bOrderChanged   As Boolean
+Private bInit           As Boolean
+
+Private bInProcess      As Boolean
+
+Private Sub hsbAngle_Scroll()
+    Call hsbAngle_Change
+End Sub
+
+Private Sub PropertyPage_EditProperty(PropertyName$)
+    On Error Resume Next
+    Select Case PropertyName$
+        Case "Caption"
+            With txtCaption
+                .SetFocus
+                .SelStart = 0
+                .SelLength = Len(.Text)
+            End With
+        Case "ImageCaptionPos"
+            lstOrder.SetFocus
+        Case "Angle"
+            hsbAngle.SetFocus
+    End Select
+End Sub
+
+Private Sub PropertyPage_Initialize()
+    bShowMsg = True
+    lblWarning = LoadResString(104)
+    bInProcess = False
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    Dim B As Boolean
+    
+    B = SelectedControls.Count > 1
+    
+    txtCaption.Enabled = Not B
+    lblWarning.Visible = B
+    
+    txtCaption.Text = SelectedControls(0).Caption
+    miAngle = CInt(SelectedControls(0).Angle)
+    lblAngle = miAngle & "°"
+    lstOrder.ListIndex = SelectedControls(0).ImageCaptionPos
+        
+    Call fAngle
+    
+    bAngleChanged = False
+    bCaptionChanged = False
+    bOrderChanged = False
+    Changed = False
+End Sub
+
+Private Sub hsbAngle_Change()
+    Changed = True
+    
+    bAngleChanged = True
+    
+    
+    If bInProcess Then Exit Sub
+    bInProcess = True
+    
+    miAngle = hsbAngle.Value
+    lblAngle.Caption = CStr(miAngle) & "°"
+    
+    With mGradient
+        .Angle = CSng(miAngle)
+        .Draw picDraw
+    End With
+    
+    Call DrawAngle(picDraw, miAngle)
+    picDraw.Refresh
+    
+    bInProcess = False
+End Sub
+
+Private Sub lstOrder_Click()
+    bOrderChanged = True
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    Dim X
+    
+    For Each X In SelectedControls
+        If bAngleChanged Then X.Angle = miAngle
+        If bCaptionChanged Then X.Caption = txtCaption
+        If bOrderChanged Then X.ImageCaptionPos = lstOrder.ListIndex
+    Next
+End Sub
+
+Private Sub fAngle()
+    Dim lC1&, lC2&
+    
+    With SelectedControls(0)
+        lC1& = fGetGradientColorRatio(.GradientColor1, .GradientColor1_Percent / 100#)
+        lC2& = fGetGradientColorRatio(.GradientColor2, .GradientColor2_Percent / 100#)
+    End With
+    With mGradient
+        .Angle = miAngle
+        .Color1 = lC1&
+        .Color2 = lC2&
+        .Draw picDraw
+        miAngle = CInt(.Angle)
+    End With
+    
+    Call DrawAngle(picDraw, miAngle)
+    hsbAngle.Value = miAngle
+End Sub
+
+Private Sub PropertyPage_Terminate()
+    On Error Resume Next
+    Set mGradient = Nothing
+End Sub
+
+Private Sub DrawAngle(picDraw As PictureBox, ByVal sngAngle As Single)
+    Dim iSize       As Integer
+    Dim iFillStyle  As Integer
+    Dim lFillColor  As Long
+    Dim lForeColor  As Long
+    Dim lRet        As Long
+    Dim uaPts(3)    As POINTAPI
+
+    With picDraw
+        'Size arrow to best fit picDraw at any angle
+        iSize = IIf(.ScaleHeight < .ScaleWidth, _
+                    Int(.ScaleHeight / PI), _
+                    Int(.ScaleWidth / PI))
+        
+        'Setup the 4 points of the arrow using the first point
+        'as the center and the other points offset from the center.
+        uaPts(0).X = .ScaleWidth / 2
+        uaPts(0).Y = .ScaleHeight / 2
+        uaPts(1).X = uaPts(0).X - iSize
+        uaPts(1).Y = uaPts(0).Y - iSize
+        uaPts(2).X = uaPts(0).X + iSize
+        uaPts(2).Y = uaPts(0).Y
+        uaPts(3).X = uaPts(0).X - iSize
+        uaPts(3).Y = uaPts(0).Y + iSize
+        
+        'Rotate the arrow to the correct angle
+        Call RotatePoints(uaPts(0), uaPts, sngAngle)
+        
+        'Save picDraw settings
+        iFillStyle = .FillStyle
+        lFillColor = .FillColor
+        lForeColor = .ForeColor
+        
+        'Setup picDraw to fill the arrow
+        .FillStyle = vbFSSolid   'Solid Fill
+        .FillColor = &HFFFFFF    'Inside = White
+        .ForeColor = &H0&        'Border = Black
+        
+        'Draw the filled arrow
+        lRet = Polygon(.hdc, uaPts(0), 4)
+        
+        'Restore picDraw settings
+        .FillStyle = iFillStyle
+        .FillColor = lFillColor
+        .ForeColor = lForeColor
+    End With
+    
+    'Free the memory
+    Erase uaPts
+End Sub
+
+'Rotates an array of PointAPI points around a center point by sngDegrees
+Private Sub RotatePoints(uAxisPt As POINTAPI, uRotatePts() As POINTAPI, sngDegrees!)
+    Dim lIdx&
+    Dim fDX!
+    Dim fDY!
+    Dim sngRadians!
+
+    sngRadians = sngDegrees * RADS
+    
+    For lIdx = 0 To UBound(uRotatePts)
+        fDX = uRotatePts(lIdx).X - uAxisPt.X
+        fDY = uRotatePts(lIdx).Y - uAxisPt.Y
+        uRotatePts(lIdx).X = uAxisPt.X + ((fDX * Cos(sngRadians)) + (fDY * Sin(sngRadians)))
+        uRotatePts(lIdx).Y = uAxisPt.Y + -((fDX * Sin(sngRadians)) - (fDY * Cos(sngRadians)))
+    Next lIdx
+End Sub
+
+Private Sub txtCaption_Change()
+    bCaptionChanged = True
+    Changed = True
+End Sub

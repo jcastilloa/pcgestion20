@@ -1,0 +1,4 @@
+Línea 19: la propiedad Icon de frmCalculator tenía una referencia a archivo no válida.
+Línea 181: la propiedad Picture de CancelEntry tenía una referencia a archivo no válida.
+Línea 203: la propiedad ItemData de lstListBox tenía una referencia a archivo no válida.
+Línea 205: la propiedad List de lstListBox tenía una referencia a archivo no válida.

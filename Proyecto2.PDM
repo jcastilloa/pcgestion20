@@ -1,0 +1,320 @@
+[Root]
+Most Recent Package=Paquete de instalación estándar 1
+
+[Package|Unitiendas 1|IconGroups]
+Group0=PC Gestión
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Unitiendas 1|PC Gestión]
+Icon1=PCGestion20.exe
+Title1=PC Gestión
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Unitiendas 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=e:\Nueva carpeta
+
+[Package|Unitiendas 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Unitiendas 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Unitiendas 1|Files Found]
+
+[Package|Unitiendas 1|Files Released]
+
+[Package|Unitiendas 1|Missing Dependency Information]
+C:\WINNT\miBwordOCX.ocx=
+C:\WINNT\system32\FM20.DLL=
+C:\Archivos de programa\Archivos comunes\SYSTEM\ADO\msadox.dll=
+C:\WINNT\system32\vsflex8l.ocx=
+C:\WINNT\system32\msimg32.dll=
+C:\WINNT\system32\IDAutomationLinear.dll=
+C:\WINNT\system32\vsflex8.ocx=
+
+[Package|Unitiendas 1|Out-of-Date Dependency Information]
+
+[Package|Unitiendas 1|Files Added]
+
+[Package|Unitiendas 1|Files Removed]
+
+[Package|Unitiendas 1|Files In Project]
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\WINNT\system32\VB6ES.DLL=Yes
+C:\WINNT\system32\msimg32.dll=Yes
+C:\WINNT\system32\vsflex8.ocx=Yes
+C:\WINNT\system32\vsflex8l.ocx=Yes
+C:\Archivos de programa\Archivos comunes\SYSTEM\ADO\msadox.dll=Yes
+C:\WINNT\system32\FM20.DLL=Yes
+C:\WINNT\system32\MSCOMCTL.OCX=Yes
+C:\WINNT\system32\MSCMCES.DLL=Yes
+C:\WINNT\system32\TABCTL32.OCX=Yes
+C:\WINNT\system32\TABCTES.DLL=Yes
+C:\WINNT\system32\comdlg32.ocx=Yes
+C:\WINNT\system32\CMDLGES.DLL=Yes
+C:\Archivos de programa\Lstpro20\BIN\fpFlp20.ocx=Yes
+C:\WINNT\system32\mfc42.dll=Yes
+C:\WINNT\system32\msvcrt.dll=Yes
+C:\WINNT\system32\MSBIND.DLL=Yes
+C:\WINNT\system32\MSSTDFMT.DLL=Yes
+C:\WINNT\system32\STDFTES.DLL=Yes
+C:\Archivos de programa\ReSizOCX\ReSize32.ocx=Yes
+C:\WINNT\system32\RICHTX32.OCX=Yes
+C:\WINNT\system32\RCHTXES.DLL=Yes
+C:\WINNT\system32\COMCT332.OCX=Yes
+C:\WINNT\system32\CMCT3ES.DLL=Yes
+C:\WINNT\miBwordOCX.ocx=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WINNT\system32\IDAutomationLinear.dll=Yes
+C:\Documents and Settings\Administrador.JCASTILLO\Escritorio\PCGestion20.exe=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Unitiendas 1|Configure Registry Files]
+Applicable=No
+
+[Package|Unitiendas 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Unitiendas 1|Install Locations]
+E:\Programas\Distrib\Nuevos\PCGestion20.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6ES.DLL=$(WinSysPath)
+C:\WINNT\system32\msimg32.dll=$(WinSysPath)
+C:\WINNT\system32\vsflex8.ocx=$(WinSysPath)
+C:\WINNT\system32\vsflex8l.ocx=$(WinSysPath)
+C:\Archivos de programa\Archivos comunes\SYSTEM\ADO\msadox.dll=$(WinSysPath)
+C:\WINNT\system32\FM20.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCMCES.DLL=$(WinSysPath)
+C:\WINNT\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINNT\system32\TABCTES.DLL=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\CMDLGES.DLL=$(WinSysPath)
+C:\Archivos de programa\Lstpro20\BIN\fpFlp20.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINNT\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\system32\STDFTES.DLL=$(WinSysPath)
+C:\Archivos de programa\ReSizOCX\ReSize32.ocx=$(WinSysPath)
+C:\WINNT\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\RCHTXES.DLL=$(WinSysPath)
+C:\WINNT\system32\COMCT332.OCX=$(WinSysPath)
+C:\WINNT\system32\CMCT3ES.DLL=$(WinSysPath)
+C:\WINNT\miBwordOCX.ocx=$(WinSysPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrador\Escritorio\PCGestion20.exe=$(AppPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\IDAutomationLinear.dll=$(WinSysPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrador.JCASTILLO\Escritorio\PCGestion20.exe=$(AppPath)
+
+[Package|Unitiendas 1|Configure Shared Files]
+Applicable=Yes
+E:\Programas\Distrib\Nuevos\PCGestion20.exe=No
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Documents and Settings\Administrador\Escritorio\PCGestion20.exe=No
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Documents and Settings\Administrador.JCASTILLO\Escritorio\PCGestion20.exe=No
+
+[Package|Unitiendas 1|Distribution]
+Type=single
+Size=
+Title=PC Gestión
+
+[Package|Unitiendas 1|Package]
+PackageFolder=e:\Nueva carpeta
+ProjectFolder=E:\Programas\Distrib\Nuevos
+ServerSideCab=
+File1=e:\Nueva carpeta\setup.exe
+File2=e:\Nueva carpeta\Setup.Lst
+File3=e:\Nueva carpeta\PCGestion20.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Paquete de instalación estándar 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=E:\Programas\Distrib\Nuevos\Ponferrada
+
+[Package|Paquete de instalación estándar 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Paquete de instalación estándar 1|Files Found]
+
+[Package|Paquete de instalación estándar 1|Files Released]
+
+[Package|Paquete de instalación estándar 1|Missing Dependency Information]
+C:\WINNT\miBwordOCX.ocx=
+C:\WINNT\system32\IDAutomationLinear.dll=
+C:\WINNT\system32\FM20.DLL=
+C:\Archivos de programa\Archivos comunes\SYSTEM\ADO\msadox.dll=
+C:\WINNT\system32\vsflex8l.ocx=
+C:\WINNT\zlib.dll=
+C:\WINNT\system32\msimg32.dll=
+
+[Package|Paquete de instalación estándar 1|Out-of-Date Dependency Information]
+
+[Package|Paquete de instalación estándar 1|Files Added]
+
+[Package|Paquete de instalación estándar 1|Files Removed]
+
+[Package|Paquete de instalación estándar 1|Files In Project]
+C:\Documents and Settings\Administrador.JCASTILLO\Escritorio\Ponferrada 1\PCGestion20.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system32\VB6ES.DLL=Yes
+C:\WINNT\system32\msimg32.dll=Yes
+C:\WINNT\zlib.dll=Yes
+C:\WINNT\system32\vsflex8.ocx=Yes
+C:\WINNT\system32\vsflex8l.ocx=Yes
+C:\Archivos de programa\Archivos comunes\SYSTEM\ADO\msadox.dll=Yes
+C:\WINNT\system32\FM20.DLL=Yes
+C:\WINNT\system32\MSCOMCTL.OCX=Yes
+C:\WINNT\system32\MSCMCES.DLL=Yes
+C:\WINNT\system32\TABCTL32.OCX=Yes
+C:\WINNT\system32\TABCTES.DLL=Yes
+C:\WINNT\system32\comdlg32.ocx=Yes
+C:\WINNT\system32\CMDLGES.DLL=Yes
+C:\Archivos de programa\Lstpro20\BIN\fpFlp20.ocx=Yes
+C:\WINNT\system32\mfc42.dll=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINNT\system32\msvcrt.dll=Yes
+C:\WINNT\system32\MSBIND.DLL=Yes
+C:\WINNT\system32\MSSTDFMT.DLL=Yes
+C:\WINNT\system32\STDFTES.DLL=Yes
+C:\Archivos de programa\ReSizOCX\ReSize32.ocx=Yes
+C:\WINNT\system32\RICHTX32.OCX=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINNT\system32\RCHTXES.DLL=Yes
+C:\WINNT\system32\COMCT332.OCX=Yes
+C:\WINNT\system32\CMCT3ES.DLL=Yes
+C:\WINNT\system32\IDAutomationLinear.dll=Yes
+C:\WINNT\miBwordOCX.ocx=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Paquete de instalación estándar 1|Configure Registry Files]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Install Locations]
+C:\Documents and Settings\Administrador.JCASTILLO\Escritorio\Ponferrada 1\PCGestion20.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6ES.DLL=$(WinSysPath)
+C:\WINNT\system32\msimg32.dll=$(WinSysPath)
+C:\WINNT\zlib.dll=$(WinSysPath)
+C:\WINNT\system32\vsflex8.ocx=$(WinSysPath)
+C:\WINNT\system32\vsflex8l.ocx=$(WinSysPath)
+C:\Archivos de programa\Archivos comunes\SYSTEM\ADO\msadox.dll=$(WinSysPath)
+C:\WINNT\system32\FM20.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCMCES.DLL=$(WinSysPath)
+C:\WINNT\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINNT\system32\TABCTES.DLL=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\CMDLGES.DLL=$(WinSysPath)
+C:\Archivos de programa\Lstpro20\BIN\fpFlp20.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINNT\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\system32\STDFTES.DLL=$(WinSysPath)
+C:\Archivos de programa\ReSizOCX\ReSize32.ocx=$(WinSysPath)
+C:\WINNT\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\RCHTXES.DLL=$(WinSysPath)
+C:\WINNT\system32\COMCT332.OCX=$(WinSysPath)
+C:\WINNT\system32\CMCT3ES.DLL=$(WinSysPath)
+C:\WINNT\system32\IDAutomationLinear.dll=$(WinSysPath)
+C:\WINNT\miBwordOCX.ocx=$(WinSysPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Paquete de instalación estándar 1|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\Administrador.JCASTILLO\Escritorio\Ponferrada 1\PCGestion20.exe=No
+D:\Archivos de programa\VS\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|Paquete de instalación estándar 1|Distribution]
+Type=single
+Size=
+Title=PC Gestión
+
+[Package|Paquete de instalación estándar 1|IconGroups]
+Group0=PC Gestión
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Paquete de instalación estándar 1|PC Gestión]
+Icon1=PCGestion20.exe
+Title1=PC Gestión
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Paquete de instalación estándar 1|Package]
+PackageFolder=E:\Programas\Distrib\Nuevos\Ponferrada
+ProjectFolder=E:\Programas\Distrib\Nuevos
+ServerSideCab=
+File1=E:\Programas\Distrib\Nuevos\Ponferrada\setup.exe
+File2=E:\Programas\Distrib\Nuevos\Ponferrada\Setup.Lst
+File3=E:\Programas\Distrib\Nuevos\Ponferrada\PCGestion20.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

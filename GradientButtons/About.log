@@ -1,0 +1,9 @@
+Línea 21: la clase serGrdBttn.ucGrdBttn del control gbCloseMe no era una clase de control cargada.
+Línea 27: el nombre de la propiedad _ExtentX de gbCloseMe no es válido.
+Línea 28: el nombre de la propiedad _ExtentY de gbCloseMe no es válido.
+Línea 29: el nombre de la propiedad Caption de gbCloseMe no es válido.
+Línea 40: el nombre de la propiedad Image de gbCloseMe no es válido.
+Línea 41: el nombre de la propiedad GradientColor1 de gbCloseMe no es válido.
+Línea 42: el nombre de la propiedad GradientColor2 de gbCloseMe no es válido.
+Línea 43: el nombre de la propiedad BorderColor2 de gbCloseMe no es válido.
+Línea 44: el nombre de la propiedad Angle de gbCloseMe no es válido.

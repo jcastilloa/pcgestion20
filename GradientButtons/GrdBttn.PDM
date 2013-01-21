@@ -1,0 +1,69 @@
+[Root]
+Most Recent Package=GrdBttn
+
+
+[Package|GrdBttn|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=D:\VB\GradCtrl
+Controls Design-Time Support=Yes
+
+[Package|GrdBttn|Configure DAO ISAMs]
+Applicable=No
+
+[Package|GrdBttn|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|GrdBttn|Files Found]
+
+[Package|GrdBttn|Files Released]
+
+[Package|GrdBttn|Missing Dependency Information]
+
+[Package|GrdBttn|Out-of-Date Dependency Information]
+
+[Package|GrdBttn|Files Added]
+C:\WINNT.SBS\System32\MsStkPrp.dll=This file is needed for usercontrol design-time support.
+
+[Package|GrdBttn|Files Removed]
+
+[Package|GrdBttn|Files In Project]
+D:\VB\GradCtrl\GrdBttn.ocx=Yes
+C:\WINNT.SBS\system32\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT.SBS\system32\MSSTKPRP.DLL=Yes
+
+[Package|GrdBttn|Configure Registry Files]
+Applicable=
+
+[Package|GrdBttn|Configure Remote Servers]
+Applicable=
+
+[Package|GrdBttn|Install Locations]
+D:\VB\GradCtrl\GrdBttn.ocx=$(WinSysPath)
+C:\WINNT.SBS\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT.SBS\system32\MSSTKPRP.DLL=$(WinSysPath)
+
+[Package|GrdBttn|Configure Shared Files]
+Applicable=
+
+[Package|GrdBttn|DepFile]
+DepCabFile=GrdBttn.CAB
+DepCabRun=GrdBttn.INF
+
+[Package|GrdBttn|Package]
+PackageFolder=D:\VB\GradCtrl
+ProjectFolder=D:\VB\GradCtrl\Code
+ServerSideCab=
+File1=D:\VB\GradCtrl\GrdBttn.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

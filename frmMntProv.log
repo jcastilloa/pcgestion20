@@ -1,0 +1,10 @@
+Línea 50: la clase FLWCtrls.FWCheck del control ioRE no era una clase de control cargada.
+Línea 290: la clase FLWCtrls.FWCheck del control ioEXENTO no era una clase de control cargada.
+Línea 57: el nombre de la propiedad _ExtentX de ioRE no es válido.
+Línea 58: el nombre de la propiedad _ExtentY de ioRE no es válido.
+Línea 59: el nombre de la propiedad Value de ioRE no es válido.
+Línea 60: el nombre de la propiedad Caption de ioRE no es válido.
+Línea 297: el nombre de la propiedad _ExtentX de ioEXENTO no es válido.
+Línea 298: el nombre de la propiedad _ExtentY de ioEXENTO no es válido.
+Línea 299: el nombre de la propiedad Value de ioEXENTO no es válido.
+Línea 300: el nombre de la propiedad Caption de ioEXENTO no es válido.

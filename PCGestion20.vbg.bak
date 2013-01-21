@@ -1,0 +1,5 @@
+VBGROUP 5.0
+StartupProject=Proyecto2.vbp
+Project=BWord\miBwordOCX.vbp
+Project=ActualizaPCGestion\Project1.vbp
+Project=ShutDown\ShutdownSystem.vbp

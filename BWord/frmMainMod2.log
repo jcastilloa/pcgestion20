@@ -1,0 +1,5 @@
+Línea 44: la clase MSComctlLib.ProgressBar del control prgBar no era una clase de control cargada.
+Línea 96: la clase MSComctlLib.Toolbar del control tbToolBar no era una clase de control cargada.
+Línea 215: la clase MSComctlLib.StatusBar del control sbStatusBar no era una clase de control cargada.
+Línea 281: la clase MSComctlLib.ImageList del control imlToolbarIcons no era una clase de control cargada.
+Línea 434: la clase RichTextLib.RichTextBox del control rtfText no era una clase de control cargada.

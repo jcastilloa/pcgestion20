@@ -1,0 +1,7 @@
+Línea 19: la clase FlexMaskBox.FlexMaskEditBox del control FlexMaskEditBox no era una clase de control cargada.
+Línea 11: la propiedad Icon de frmFIB tenía una referencia a archivo no válida.
+Línea 27: el nombre de la propiedad _extentx de FlexMaskEditBox no es válido.
+Línea 28: el nombre de la propiedad _extenty de FlexMaskEditBox no es válido.
+Línea 29: el nombre de la propiedad decimalseperator de FlexMaskEditBox no es válido.
+Línea 30: la propiedad font de FlexMaskEditBox tenía una referencia a archivo no válida.
+Línea 32: el nombre de la propiedad formatfont de FlexMaskEditBox no es válido.

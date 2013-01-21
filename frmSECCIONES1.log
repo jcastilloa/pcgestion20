@@ -1,0 +1,23 @@
+Línea 22: la clase MSHierarchicalFlexGridLib.MSHFlexGrid del control MSHFlexGrid1 no era una clase de control cargada.
+Línea 29: el nombre de la propiedad _ExtentX de MSHFlexGrid1 no es válido.
+Línea 30: el nombre de la propiedad _ExtentY de MSHFlexGrid1 no es válido.
+Línea 31: el nombre de la propiedad _Version de MSHFlexGrid1 no es válido.
+Línea 34: el nombre de la propiedad Rows de MSHFlexGrid1 no es válido.
+Línea 35: el nombre de la propiedad Cols de MSHFlexGrid1 no es válido.
+Línea 36: el nombre de la propiedad FixedCols de MSHFlexGrid1 no es válido.
+Línea 37: el nombre de la propiedad BackColorFixed de MSHFlexGrid1 no es válido.
+Línea 38: el nombre de la propiedad ForeColorFixed de MSHFlexGrid1 no es válido.
+Línea 39: el nombre de la propiedad GridColor de MSHFlexGrid1 no es válido.
+Línea 40: el nombre de la propiedad GridColorFixed de MSHFlexGrid1 no es válido.
+Línea 41: el nombre de la propiedad WordWrap de MSHFlexGrid1 no es válido.
+Línea 42: el nombre de la propiedad AllowBigSelection de MSHFlexGrid1 no es válido.
+Línea 43: el nombre de la propiedad FocusRect de MSHFlexGrid1 no es válido.
+Línea 44: el nombre de la propiedad HighLight de MSHFlexGrid1 no es válido.
+Línea 45: el nombre de la propiedad GridLines de MSHFlexGrid1 no es válido.
+Línea 46: el nombre de la propiedad GridLinesFixed de MSHFlexGrid1 no es válido.
+Línea 47: el nombre de la propiedad AllowUserResizing de MSHFlexGrid1 no es válido.
+Línea 48: el nombre de la propiedad FormatString de MSHFlexGrid1 no es válido.
+Línea 49: el nombre de la propiedad _NumberOfBands de MSHFlexGrid1 no es válido.
+Línea 50: el nombre de la propiedad _Band(0).Cols de MSHFlexGrid1 no es válido.
+Línea 51: el nombre de la propiedad _Band(0).GridLineWidthBand de MSHFlexGrid1 no es válido.
+Línea 52: el nombre de la propiedad _Band(0).TextStyleBand de MSHFlexGrid1 no es válido.

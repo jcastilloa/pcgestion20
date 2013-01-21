@@ -1,0 +1,160 @@
+VERSION 5.00
+Object = "{86F61BA6-DB2A-42CC-BBB8-7FD215928961}#1.0#0"; "miCombo.ocx"
+Begin VB.Form Form1 
+   BackColor       =   &H00C0C0C0&
+   Caption         =   "Form1"
+   ClientHeight    =   4425
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   11025
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   4425
+   ScaleWidth      =   11025
+   StartUpPosition =   3  'Windows Default
+   Begin PCGestion.miCombo miCombo2 
+      Height          =   495
+      Left            =   1155
+      TabIndex        =   6
+      Top             =   2715
+      Width           =   6360
+      _ExtentX        =   11218
+      _ExtentY        =   873
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin PCGestion.miCombo miCombo1 
+      Height          =   555
+      Left            =   1005
+      TabIndex        =   5
+      Top             =   2025
+      Width           =   6720
+      _ExtentX        =   11853
+      _ExtentY        =   979
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin VB.OptionButton Option2 
+      Caption         =   "miCombo 2"
+      Height          =   255
+      Left            =   2040
+      TabIndex        =   4
+      Top             =   870
+      Width           =   1260
+   End
+   Begin VB.OptionButton Option1 
+      Caption         =   "miCombo 1"
+      Height          =   240
+      Left            =   2040
+      TabIndex        =   3
+      Top             =   600
+      Value           =   -1  'True
+      Width           =   1260
+   End
+   Begin VB.CommandButton Command3 
+      Caption         =   "BUSCAR CODIGO"
+      Height          =   555
+      Left            =   495
+      TabIndex        =   2
+      Top             =   600
+      Width           =   1500
+   End
+   Begin VB.CommandButton Command2 
+      Caption         =   "PRINT CODIGOS"
+      Height          =   555
+      Left            =   1830
+      TabIndex        =   1
+      Top             =   1185
+      Width           =   1125
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "CARGAR DATOS"
+      Height          =   555
+      Left            =   495
+      TabIndex        =   0
+      Top             =   1185
+      Width           =   1305
+   End
+End
+Attribute VB_Name = "Form1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+
+'///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+' PROPIEDADES
+
+'micombo1.CodigoWidth       Anchura del campo codigo (la anchura de la descripcion se ajustara al espacio libre)
+'micombo1.LenCodigo          Tamaño del codigo (para el format "0000" y para extrar el codigo del combo)
+'micombo1.ConexionString    CADENA DE CONEXION
+'micombo1.SQLString           SQL
+'micombo1.Font                  Acepta un objeto Font con los datos del font a utilizar
+
+
+'ejemplo de SQLString:
+'select employeeID,  firstname & '   '  & lastname  from EMPLOYEES
+
+'el SQLstring debe devolver SIEMPRE 2 campos, el primero se utilizara para el codigo y el 2º se utilizara para
+'la descripción.
+'////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Private Sub Command1_Click()
+
+GetSystemTime SysTime
+
+With miCombo1
+    .LenCodigo = 3  'id empleado "000"
+    .ConexionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & App.Path & "\prueba.mdb;Persist Security Info=False"
+    .SQLString = "select employeeID,  firstname & '   '  & lastname  from EMPLOYEES"
+    .Carga  'cargar datos
+End With
+
+With miCombo2
+    .LenCodigo = 3  'id categoria "000"
+    .ConexionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & App.Path & "\prueba.mdb;Persist Security Info=False"
+    .SQLString = "select CategoryID, description  from categories"
+    .Carga  'cargar datos
+End With
+
+GetSystemTime SysTime2
+
+Debug.Print "Inicio: " & SysTime.wMinute & "-" & SysTime.wSecond & "-" & SysTime.wMilliseconds
+Debug.Print "Fin: " & SysTime2.wMinute & "-" & SysTime2.wSecond & "-" & SysTime2.wMilliseconds
+
+End Sub
+
+
+Private Sub Command2_Click()
+Print miCombo1.Codigo & " " & miCombo2.Codigo
+End Sub
+
+Private Sub Command3_Click()
+Dim tmpcodigo As String
+tmpcodigo = InputBox("Introduzca codigo (3 digitos maximo):", "Prueba miCombo", 1)
+
+If Not IsNumeric(tmpcodigo) Then Exit Sub
+
+If Option1.Value = True Then
+    miCombo1.Codigo = tmpcodigo
+Else
+    miCombo2.Codigo = tmpcodigo
+End If
+
+End Sub
+
+

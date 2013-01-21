@@ -1,0 +1,130 @@
+VERSION 5.00
+Begin VB.PropertyPage About 
+   Caption         =   "About"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3495
+   ScaleWidth      =   5925
+   Begin VB.Frame Frame2 
+      Caption         =   "With ideas and suggestions from :"
+      Height          =   900
+      Left            =   432
+      TabIndex        =   5
+      Top             =   2352
+      Width           =   5130
+      Begin VB.Label Label3 
+         Caption         =   "Douwe Konings       dkonings@xs4all.nl"
+         Height          =   252
+         Left            =   120
+         TabIndex        =   7
+         Top             =   600
+         Width           =   4812
+      End
+      Begin VB.Label Label4 
+         Caption         =   "Hans Scholten          Wonen@Wonen.com"
+         Height          =   300
+         Left            =   120
+         TabIndex        =   6
+         Top             =   360
+         Width           =   4575
+      End
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "Developed by:"
+      Height          =   1020
+      Left            =   432
+      TabIndex        =   2
+      Top             =   1200
+      Width           =   4764
+      Begin VB.Label Label1 
+         Alignment       =   2  'Center
+         Caption         =   "Ted Schopenhouer   "
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   348
+         Left            =   144
+         TabIndex        =   4
+         Top             =   240
+         Width           =   4476
+      End
+      Begin VB.Label Label2 
+         Alignment       =   2  'Center
+         Caption         =   "ted.schopenhouer@12Move.nl"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   -1  'True
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   348
+         Left            =   144
+         TabIndex        =   3
+         Top             =   576
+         Width           =   4476
+      End
+   End
+   Begin VB.Label lblVersion 
+      Caption         =   "Version"
+      Height          =   228
+      Left            =   480
+      TabIndex        =   1
+      Top             =   816
+      Width           =   3408
+   End
+   Begin VB.Label lblTitle 
+      Caption         =   "Flex MaskEditBox ""The Problem Solver"""
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   480
+      Left            =   528
+      TabIndex        =   0
+      Top             =   288
+      Width           =   4320
+   End
+End
+Attribute VB_Name = "About"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+
+'Developed by Ted Schopenhouer   ted.schopenhouer@12Move.nl
+
+'with ideas and suggestions from Hans Scholten Wonen@Wonen.com
+'                           and  Douwe Konings dkonings@xs4all.nl
+
+'This sources may be used freely without the intention of commercial distribution.
+'For ALL other use of this control YOU MUST HAVE PERMISSION of the developer.
+
+'In other words, when you are developing a program for yourself or for
+'a company without selling this product to thirt party's it's allowed to
+'use this source code. When you, or the company you work for, sells the
+'program then permission is needed!!!!!
+
+Private Sub PropertyPage_GotFocus()
+lblVersion.Caption = "Version " & AppVersion()
+End Sub
+
+

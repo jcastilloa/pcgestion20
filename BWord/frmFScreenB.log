@@ -1,0 +1,2 @@
+Línea 18: la clase MSComctlLib.ImageList del control imgFull no era una clase de control cargada.
+Línea 36: la clase MSComctlLib.Toolbar del control tbrFull no era una clase de control cargada.

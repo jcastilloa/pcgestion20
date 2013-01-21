@@ -1,0 +1,783 @@
+VERSION 5.00
+Begin VB.PropertyPage Characteristics 
+   Caption         =   "Characteristics"
+   ClientHeight    =   6570
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   6225
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   6570
+   ScaleWidth      =   6225
+   Begin VB.TextBox txtDecimalSeperator 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   330
+      Left            =   5280
+      MaxLength       =   1
+      TabIndex        =   51
+      ToolTipText     =   "DecimalSeperator (The . will stay valid for decimal input when pushed"
+      Top             =   120
+      Width           =   300
+   End
+   Begin VB.CheckBox chkBorderNoFocus 
+      Caption         =   "BorderNoFocus"
+      Height          =   285
+      Left            =   1980
+      TabIndex        =   46
+      ToolTipText     =   "Draw a border around the control when the control has NO Focus (InActive)"
+      Top             =   5880
+      Width           =   1620
+   End
+   Begin VB.CheckBox chkBorderIfFocus 
+      Caption         =   "BorderIfFocus"
+      Height          =   285
+      Left            =   1980
+      TabIndex        =   45
+      ToolTipText     =   "Draw a border around the control when the control has Focus (Active)"
+      Top             =   6120
+      Width           =   1860
+   End
+   Begin VB.Frame Frame2 
+      Caption         =   "BorderStyle / Appearance"
+      Height          =   795
+      Left            =   240
+      TabIndex        =   47
+      Top             =   5640
+      Width           =   3675
+      Begin VB.OptionButton optBorderStyle 
+         Caption         =   "FixedSingle"
+         Height          =   255
+         Index           =   1
+         Left            =   60
+         TabIndex        =   49
+         Top             =   480
+         Width           =   1395
+      End
+      Begin VB.OptionButton optBorderStyle 
+         Caption         =   "None"
+         Height          =   255
+         Index           =   0
+         Left            =   60
+         TabIndex        =   48
+         Top             =   240
+         Value           =   -1  'True
+         Width           =   1095
+      End
+   End
+   Begin VB.TextBox txtChar2ActivateTranNextChar2Upper 
+      Height          =   330
+      Left            =   4920
+      TabIndex        =   44
+      ToolTipText     =   "Transform next char to uppercase if one of the chars is found"
+      Top             =   1620
+      Width           =   660
+   End
+   Begin VB.TextBox txtDateSeperator 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   315
+      Left            =   3420
+      TabIndex        =   35
+      Text            =   "-"
+      ToolTipText     =   "DateSeperator seperate Century from Month and Day (ignored when LOCAL SETTING is Choosen (First Item))"
+      Top             =   3900
+      Width           =   315
+   End
+   Begin VB.ComboBox cboDateFormat 
+      Height          =   315
+      Left            =   1980
+      Style           =   2  'Dropdown List
+      TabIndex        =   34
+      ToolTipText     =   "DateFormat where the user works with, independent of the LOCAL MACHINE settings  (First Item in Capital Letters = LOCAL SETTING)"
+      Top             =   3900
+      Width           =   1455
+   End
+   Begin VB.VScrollBar VScroll2 
+      Height          =   300
+      LargeChange     =   2
+      Left            =   1680
+      Max             =   0
+      Min             =   35
+      TabIndex        =   13
+      Top             =   3900
+      Value           =   15
+      Width           =   144
+   End
+   Begin VB.TextBox txtCentury 
+      Height          =   288
+      Left            =   1320
+      MaxLength       =   3
+      TabIndex        =   12
+      ToolTipText     =   "century indication in mask (and the text when MaskCharInclude is selected)"
+      Top             =   3900
+      Width           =   348
+   End
+   Begin VB.CheckBox chkCenturyON 
+      Caption         =   "CenturyON"
+      Height          =   285
+      Left            =   180
+      TabIndex        =   11
+      ToolTipText     =   "century indication by an date field"
+      Top             =   3900
+      Width           =   1164
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "Date Property's"
+      Height          =   795
+      Left            =   120
+      TabIndex        =   36
+      Top             =   3480
+      Width           =   6015
+      Begin VB.TextBox txtInOutDateSeperator 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   315
+         Left            =   5340
+         TabIndex        =   41
+         Text            =   "-"
+         ToolTipText     =   "DateSeperator seperate Century from Month and Day (ignored when LOCAL SETTING is Choosen (First Item))"
+         Top             =   420
+         Width           =   375
+      End
+      Begin VB.ComboBox cboInOutDatFormat 
+         Height          =   315
+         Left            =   3840
+         Style           =   2  'Dropdown List
+         TabIndex        =   38
+         ToolTipText     =   "DateFormat For Read and Write purpose outside the control (First Item in Capital Letters = LOCAL SETTING)"
+         Top             =   420
+         Width           =   1515
+      End
+      Begin VB.Label Label6 
+         Caption         =   "Sep"
+         Height          =   255
+         Left            =   5340
+         TabIndex        =   42
+         Top             =   180
+         Width           =   495
+      End
+      Begin VB.Label Label3 
+         Caption         =   "Sep"
+         Height          =   195
+         Left            =   3300
+         TabIndex        =   40
+         Top             =   180
+         Width           =   435
+      End
+      Begin VB.Label Label5 
+         Caption         =   "InOutDateFormat"
+         Height          =   195
+         Left            =   3840
+         TabIndex        =   39
+         Top             =   180
+         Width           =   1275
+      End
+      Begin VB.Label Label4 
+         Caption         =   "Work DateFormat"
+         Height          =   255
+         Left            =   1860
+         TabIndex        =   37
+         Top             =   180
+         Width           =   1395
+      End
+   End
+   Begin VB.TextBox TxtToolTipText 
+      Height          =   345
+      Left            =   1440
+      TabIndex        =   10
+      Top             =   3060
+      Width           =   2835
+   End
+   Begin VB.CheckBox chkExitOnEnter 
+      Caption         =   "ExitOnEnter"
+      Height          =   252
+      Left            =   3300
+      TabIndex        =   20
+      ToolTipText     =   "focus to the next Control in tab order list when ReturnKey (to next FlexMask when Up/Down is True) is pressed."
+      Top             =   4560
+      Width           =   1644
+   End
+   Begin VB.CheckBox chkEnabled 
+      Caption         =   "Enabled"
+      Height          =   285
+      Left            =   300
+      TabIndex        =   18
+      Top             =   5280
+      Width           =   1452
+   End
+   Begin VB.CheckBox chkMaskCharInclude 
+      Caption         =   "MaskChar/DateSeperator Include"
+      Height          =   285
+      Left            =   300
+      TabIndex        =   16
+      ToolTipText     =   "don't filter mask chars or DateSeperator out of text."
+      Top             =   4800
+      Width           =   2850
+   End
+   Begin VB.CheckBox chkBeepOnError 
+      Caption         =   "BeepOnError"
+      Height          =   285
+      Left            =   3300
+      TabIndex        =   22
+      ToolTipText     =   "beep when user gives invalid input"
+      Top             =   5040
+      Width           =   1740
+   End
+   Begin VB.CheckBox chkPromptInclude 
+      Caption         =   "PromptCharInclude"
+      Height          =   285
+      Left            =   300
+      TabIndex        =   15
+      ToolTipText     =   "don't filter prompt char out of text"
+      Top             =   4560
+      Width           =   1788
+   End
+   Begin VB.CheckBox chkAutoToLastPos 
+      Caption         =   "AutoToLastPos"
+      Height          =   285
+      Left            =   300
+      TabIndex        =   14
+      ToolTipText     =   "automatic to last char in the text field"
+      Top             =   4320
+      Width           =   1836
+   End
+   Begin VB.CheckBox chkCalculatorInMenu 
+      Caption         =   "CalculatorInMenu"
+      Height          =   285
+      Left            =   3300
+      TabIndex        =   23
+      ToolTipText     =   "calculator In the MouseMenu."
+      Top             =   5280
+      Width           =   1644
+   End
+   Begin VB.CheckBox chkInsertZerosInNumField 
+      Caption         =   "InsertZerosInNumField"
+      Height          =   285
+      Left            =   300
+      TabIndex        =   17
+      ToolTipText     =   "Insert 0 in a Numeric Field"
+      Top             =   5040
+      Width           =   2028
+   End
+   Begin VB.CheckBox chkUpAndDownKeys2NextFlexMask 
+      Caption         =   "Navigate with Up/Down Keys"
+      Height          =   285
+      Left            =   3300
+      TabIndex        =   21
+      ToolTipText     =   "Use the Up and (Down or Return) keys for Previous/Next FlexMaskBox"
+      Top             =   4800
+      Width           =   2610
+   End
+   Begin VB.CheckBox chkAutoNextFlexInput 
+      Caption         =   "AutoNextFlexInput"
+      Height          =   285
+      Left            =   3300
+      TabIndex        =   19
+      ToolTipText     =   "go to next flexmaskbox after the last possible input has filled in"
+      Top             =   4320
+      Width           =   1785
+   End
+   Begin VB.ComboBox cboFormatAlignment 
+      Height          =   288
+      Left            =   1440
+      TabIndex        =   9
+      Top             =   2688
+      Width           =   2268
+   End
+   Begin VB.TextBox txtFormatString 
+      Height          =   330
+      Left            =   1440
+      TabIndex        =   8
+      ToolTipText     =   "formatString when Flex has no focus. (identical to the format function)"
+      Top             =   2304
+      Width           =   2700
+   End
+   Begin VB.TextBox txtSpecialChars 
+      Height          =   330
+      Left            =   2880
+      MaxLength       =   10
+      TabIndex        =   7
+      ToolTipText     =   "special Chars who are ignored by the mask (for instance * for Find *)"
+      Top             =   1920
+      Width           =   1260
+   End
+   Begin VB.VScrollBar VScroll1 
+      Height          =   300
+      LargeChange     =   5
+      Left            =   1920
+      Max             =   0
+      Min             =   999
+      TabIndex        =   5
+      Top             =   1584
+      Value           =   1
+      Width           =   144
+   End
+   Begin VB.ComboBox cboFieldType 
+      Height          =   315
+      Left            =   1440
+      Style           =   2  'Dropdown List
+      TabIndex        =   0
+      ToolTipText     =   "by numeric choice Auto to decimal point in text;Choose Date for DateMask"
+      Top             =   144
+      Width           =   2316
+   End
+   Begin VB.TextBox txtMaxLength 
+      Height          =   288
+      Left            =   1440
+      MaxLength       =   3
+      TabIndex        =   4
+      ToolTipText     =   "maximum length of textfield(Maximum between MaskLength and maxLength)"
+      Top             =   1584
+      Width           =   444
+   End
+   Begin VB.ComboBox cboAlignment 
+      Height          =   315
+      Left            =   1440
+      Style           =   2  'Dropdown List
+      TabIndex        =   1
+      Top             =   480
+      Width           =   2316
+   End
+   Begin VB.TextBox txtText 
+      Height          =   330
+      Left            =   1440
+      TabIndex        =   2
+      Top             =   816
+      Width           =   2700
+   End
+   Begin VB.TextBox txtMask 
+      Height          =   330
+      Left            =   1440
+      TabIndex        =   3
+      ToolTipText     =   "inputMask, compatible with the masks of the common maskeditbox"
+      Top             =   1200
+      Width           =   2700
+   End
+   Begin VB.TextBox txtPromptChar 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   288
+      Left            =   1440
+      MaxLength       =   1
+      TabIndex        =   6
+      ToolTipText     =   "promp char ( required Default _) "
+      Top             =   1968
+      Width           =   252
+   End
+   Begin VB.Label lblDecimalSeperator 
+      Caption         =   "DecimalSeperator:"
+      Height          =   240
+      Left            =   3840
+      TabIndex        =   50
+      Top             =   240
+      Width           =   1500
+   End
+   Begin VB.Label lblChar2ActivateTranNextChar2Upper 
+      Caption         =   "Char2ActivateTranNextChar2Upper:"
+      Height          =   240
+      Left            =   2160
+      TabIndex        =   43
+      Top             =   1680
+      Width           =   2700
+   End
+   Begin VB.Label Label1 
+      Caption         =   "ToolTipText"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   33
+      Top             =   3120
+      Width           =   1155
+   End
+   Begin VB.Label Label2 
+      Caption         =   "Format Alignment"
+      Height          =   252
+      Left            =   96
+      TabIndex        =   32
+      Top             =   2736
+      Width           =   1404
+   End
+   Begin VB.Label lblFieldType 
+      Caption         =   "FieldType:"
+      Height          =   240
+      Index           =   0
+      Left            =   96
+      TabIndex        =   31
+      Top             =   192
+      Width           =   1404
+   End
+   Begin VB.Label lblPromptChar 
+      Caption         =   "PromptChar:"
+      Height          =   240
+      Left            =   96
+      TabIndex        =   30
+      Top             =   2007
+      Width           =   1116
+   End
+   Begin VB.Label lblMask 
+      Caption         =   "Mask:"
+      Height          =   240
+      Left            =   96
+      TabIndex        =   29
+      Top             =   1281
+      Width           =   636
+   End
+   Begin VB.Label lblAlignment 
+      Caption         =   "Text Alignment:"
+      Height          =   240
+      Index           =   0
+      Left            =   96
+      TabIndex        =   28
+      Top             =   555
+      Width           =   1260
+   End
+   Begin VB.Label lblMaxLength 
+      Caption         =   "MaxLength:"
+      Height          =   240
+      Left            =   96
+      TabIndex        =   27
+      Top             =   1644
+      Width           =   1164
+   End
+   Begin VB.Label lblText 
+      Caption         =   "Text:"
+      Height          =   240
+      Left            =   96
+      TabIndex        =   26
+      Top             =   918
+      Width           =   780
+   End
+   Begin VB.Label lblFormat 
+      Caption         =   "Format String"
+      Height          =   240
+      Left            =   96
+      TabIndex        =   25
+      Top             =   2370
+      Width           =   1068
+   End
+   Begin VB.Label lblSpecialChars 
+      Caption         =   "SpecialChars:"
+      Height          =   240
+      Left            =   1776
+      TabIndex        =   24
+      Top             =   2016
+      Width           =   1116
+   End
+End
+Attribute VB_Name = "Characteristics"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+
+'Developed by Ted Schopenhouer   ted.schopenhouer@12Move.nl
+
+'with ideas and suggestions from Hans Scholten Wonen@Wonen.com
+'                           and  Douwe Konings dkonings@xs4all.nl
+
+'This sources may be used freely without the intention of commercial distribution.
+'For ALL other use of this control YOU MUST HAVE PERMISSION of the developer.
+
+'In other words, when you are developing a program for yourself or for
+'a company without selling this product to thirt party's it's allowed to
+'use this source code. When you, or the company you work for, sells the
+'program then permission is needed!!!!!
+
+Private Sub txtDecimalSeperator_Change()
+Changed = True
+End Sub
+
+Private Sub chkBorderNoFocus_Click()
+Changed = True
+End Sub
+
+Private Sub chkBorderIfFocus_Click()
+Changed = True
+End Sub
+
+Private Sub optBorderStyle_Click(Index As Integer)
+Changed = True
+End Sub
+
+Private Sub txtChar2ActivateTranNextChar2Upper_Change()
+Changed = True
+End Sub
+
+Private Sub cboInOutDatFormat_click()
+Changed = True
+End Sub
+
+Private Sub chkAutoNextFlexInput_Click()
+Changed = True
+End Sub
+
+Private Sub chkUpAndDownKeys2NextFlexMask_Click()
+Changed = True
+End Sub
+
+Private Sub chkInsertZerosInNumField_Click()
+Changed = True
+End Sub
+
+Private Sub chkCalculatorInMenu_Click()
+Changed = True
+End Sub
+Private Sub cboDateFormat_click()
+If cboFieldType.ListIndex = flxFieldType.DateField Then
+   Call cboFieldType_Click
+End If
+End Sub
+
+Private Sub cboFormatAlignment_click()
+Changed = True
+End Sub
+
+Private Sub PropertyPage_Terminate()
+cboAlignment.Clear
+cboDateFormat.Clear
+cboFieldType.Clear
+cboFormatAlignment.Clear
+cboInOutDatFormat.Clear
+End Sub
+
+Private Sub txtDateSeperator_Change()
+Call chkCenturyON_Click
+End Sub
+
+Private Sub txtFormatString_Change()
+Changed = True
+End Sub
+
+Private Sub txtInOutDateSeperator_Change()
+Changed = True
+End Sub
+
+Private Sub txtSpecialChars_Change()
+Changed = True
+End Sub
+
+Private Sub cboAlignment_Click()
+Changed = True
+End Sub
+
+Private Sub cboFieldType_Click()
+txtMask.Text = ""
+txtMaxLength = "0"
+VScroll2.Value = 0
+Changed = True
+txtMask.Locked = cboFieldType.ListIndex = 1
+End Sub
+
+Private Sub chkEnabled_Click()
+Changed = True
+End Sub
+
+Private Sub chkCenturyON_Click()
+If cboFieldType.ListIndex = flxFieldType.DateField Then
+   txtMask.Text = ""
+End If
+Changed = True
+End Sub
+
+Private Sub chkExitOnEnter_Click()
+Changed = True
+End Sub
+
+Private Sub chkMaskCharInclude_Click()
+Changed = True
+End Sub
+
+Private Sub chkBeepOnError_Click()
+Changed = True
+End Sub
+
+Private Sub chkPromptInclude_Click()
+Changed = True
+End Sub
+
+Private Sub txtCentury_Change()
+Changed = True
+End Sub
+
+Private Sub TxtToolTipText_Change()
+Changed = True
+End Sub
+
+Private Sub txtText_Change()
+Changed = True
+End Sub
+
+Private Sub txtMaxLength_Change()
+Changed = True
+End Sub
+
+Private Sub txtMask_Change()
+Changed = True
+End Sub
+
+Private Sub chkAutoToLastPos_Click()
+Changed = True
+End Sub
+
+Private Sub txtPromptChar_Change()
+Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    
+With SelectedControls(0)
+   .DecimalSeperator = txtDecimalSeperator.Text
+   .BorderStyle = IIf(optBorderStyle(0), 0, 1)
+   .BorderNoFocus = (chkBorderNoFocus.Value = vbChecked)
+   .BorderIfFocus = (chkBorderIfFocus.Value = vbChecked)
+   .Char2ActivateTranNextChar2Upper = txtChar2ActivateTranNextChar2Upper.Text
+   .AutoNextFlexInput = (chkAutoNextFlexInput.Value = vbChecked)
+   .UpAndDownKeys2NextFlexMask = (chkUpAndDownKeys2NextFlexMask.Value = vbChecked)
+   .InsertZerosInNumField = (chkInsertZerosInNumField.Value = vbChecked)
+   .CalculatorInMenu = (chkCalculatorInMenu.Value = vbChecked)
+   .FormatString = txtFormatString.Text
+   .SpecialChars = txtSpecialChars.Text
+   .Enabled = (chkEnabled.Value = vbChecked)
+   .ExitOnEnter = (chkExitOnEnter.Value = vbChecked)
+   .FieldType = cboFieldType.ListIndex
+   .Dateformat = cboDateFormat.ListIndex
+   .InOutDateformat = cboInOutDatFormat.ListIndex
+   .Century = Min(Max(0, Val(txtCentury.Text)), 35)
+   .DateSeperator = txtDateSeperator
+   .MaskCharInclude = (chkMaskCharInclude.Value = vbChecked)
+   .PromptChar = txtPromptChar.Text
+   .InOutDateSeperator = txtInOutDateSeperator.Text
+   .BeepOnError = (chkBeepOnError.Value = vbChecked)
+   .PromptInclude = (chkPromptInclude.Value = vbChecked)
+   .AutoToLastPos = (chkAutoToLastPos.Value = vbChecked)
+   .Alignment = cboAlignment.ListIndex
+   .FormatAlignment = cboFormatAlignment.ListIndex
+   .CenturyON = (chkCenturyON.Value = vbChecked)
+   .MaxLength = Min(Max(0, Val(txtMaxLength.Text)), 999)
+   .Mask = txtMask.Text
+   .Text = txtText.Text
+   .ToolTipText = TxtToolTipText.Text
+End With
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    
+Dim i As Integer
+   
+With SelectedControls(0)
+   txtDecimalSeperator.Text = .DecimalSeperator
+   optBorderStyle(0).Value = .BorderStyle = 0
+   optBorderStyle(1).Value = .BorderStyle = 1
+   chkBorderNoFocus.Value = (.BorderNoFocus And vbChecked)
+   chkBorderIfFocus.Value = (.BorderIfFocus And vbChecked)
+   txtChar2ActivateTranNextChar2Upper.Text = .Char2ActivateTranNextChar2Upper
+   chkAutoNextFlexInput.Value = (.AutoNextFlexInput And vbChecked)
+   chkUpAndDownKeys2NextFlexMask.Value = (.UpAndDownKeys2NextFlexMask And vbChecked)
+   chkInsertZerosInNumField.Value = (.InsertZerosInNumField And vbChecked)
+   chkCalculatorInMenu.Value = (.CalculatorInMenu And vbChecked)
+   txtDateSeperator.Text = .DateSeperator
+   txtFormatString.Text = .FormatString
+   txtSpecialChars.Text = .SpecialChars
+   TxtToolTipText.Text = .ToolTipText
+   chkEnabled.Value = (.Enabled And vbChecked)
+   txtInOutDateSeperator.Text = .InOutDateSeperator
+End With
+
+With cboAlignment
+   .Clear
+   .AddItem vbLeftJustify & " - vbLeftJustify", vbLeftJustify
+   .AddItem vbRightJustify & " - vbRightJustify", vbRightJustify
+   .AddItem vbCenter & " - vbCenter", vbCenter
+   .ListIndex = SelectedControls(0).Alignment
+End With
+
+With cboDateFormat
+   .Clear
+   .AddItem LocalDate()
+   For i = 2 To 15
+      .AddItem sDateFormats(i)
+   Next
+   .ListIndex = SelectedControls(0).Dateformat
+End With
+With cboInOutDatFormat
+   .Clear
+   For i = 0 To 14
+      .AddItem cboDateFormat.List(i)
+   Next
+   .ListIndex = SelectedControls(0).InOutDateformat
+End With
+With cboFormatAlignment
+   .Clear
+   .AddItem vbLeftJustify & " - vbLeftJustify", vbLeftJustify
+   .AddItem vbRightJustify & " - vbRightJustify", vbRightJustify
+   .AddItem vbCenter & " - vbCenter", vbCenter
+   .ListIndex = SelectedControls(0).FormatAlignment
+End With
+
+With cboFieldType
+   .Clear
+   .AddItem "A - AlfaNumericFieldField", flxFieldType.AlfaNumericField
+   .AddItem "D - Date", flxFieldType.DateField
+   .AddItem "N - NumericField", flxFieldType.NumericField
+   .ListIndex = SelectedControls(0).FieldType
+End With
+
+With SelectedControls(0)
+   chkCenturyON.Value = (.CenturyON And vbChecked)
+   chkExitOnEnter.Value = (.ExitOnEnter And vbChecked)
+   chkMaskCharInclude.Value = (.MaskCharInclude And vbChecked)
+   chkBeepOnError.Value = (.BeepOnError And vbChecked)
+   chkPromptInclude.Value = (.PromptInclude And vbChecked)
+   txtMaxLength.Text = .MaxLength
+   txtCentury.Text = .Century
+   VScroll1.Value = Min(Max(0, Val(txtMaxLength.Text)), 999)
+   VScroll2.Value = Min(Max(0, Val(txtCentury.Text)), 35)
+   
+   chkAutoToLastPos.Value = (.AutoToLastPos And vbChecked)
+   txtPromptChar.Text = .PromptChar
+   txtText.Text = .Text
+   txtMask.Text = .Mask
+   txtMask.Locked = cboFieldType.ListIndex = 1
+End With
+
+Changed = False
+End Sub
+
+Private Sub VScroll1_Change()
+txtMaxLength.Text = Format$(VScroll1.Value, "###000")
+End Sub
+
+Private Sub VScroll2_Change()
+txtMask = ""
+txtCentury.Text = Format$(VScroll2.Value, "##00")
+End Sub
+
+

@@ -1,0 +1,27 @@
+Línea 28: la clase bsGLabel3.bsGradientLabel del control glTest no era una clase de control cargada.
+Línea 48: la clase bsGLabel3.bsGradientLabel del control bsGradientLabel2 no era una clase de control cargada.
+Línea 69: la clase bsGLabel3.bsGradientLabel del control bsGradientLabel1 no era una clase de control cargada.
+Línea 33: el nombre de la propiedad _ExtentX de glTest no es válido.
+Línea 34: el nombre de la propiedad _ExtentY de glTest no es válido.
+Línea 35: el nombre de la propiedad Caption de glTest no es válido.
+Línea 44: el nombre de la propiedad Fount de glTest no es válido.
+Línea 45: el nombre de la propiedad LabelType de glTest no es válido.
+Línea 46: el nombre de la propiedad WordWrap de glTest no es válido.
+Línea 53: el nombre de la propiedad _ExtentX de bsGradientLabel2 no es válido.
+Línea 54: el nombre de la propiedad _ExtentY de bsGradientLabel2 no es válido.
+Línea 55: el nombre de la propiedad Caption de bsGradientLabel2 no es válido.
+Línea 64: el nombre de la propiedad Fount de bsGradientLabel2 no es válido.
+Línea 65: el nombre de la propiedad CaptionColour de bsGradientLabel2 no es válido.
+Línea 66: el nombre de la propiedad Colour1 de bsGradientLabel2 no es válido.
+Línea 67: el nombre de la propiedad Colour2 de bsGradientLabel2 no es válido.
+Línea 74: el nombre de la propiedad _ExtentX de bsGradientLabel1 no es válido.
+Línea 75: el nombre de la propiedad _ExtentY de bsGradientLabel1 no es válido.
+Línea 76: el nombre de la propiedad GradientType de bsGradientLabel1 no es válido.
+Línea 77: el nombre de la propiedad Caption de bsGradientLabel1 no es válido.
+Línea 86: el nombre de la propiedad Fount de bsGradientLabel1 no es válido.
+Línea 87: el nombre de la propiedad CaptionColour de bsGradientLabel1 no es válido.
+Línea 88: el nombre de la propiedad Colour1 de bsGradientLabel1 no es válido.
+Línea 89: el nombre de la propiedad Colour2 de bsGradientLabel1 no es válido.
+Línea 90: el nombre de la propiedad LabelType de bsGradientLabel1 no es válido.
+Línea 92: el nombre de la propiedad TextShadow de bsGradientLabel1 no es válido.
+Línea 69: no se pudo establecer la propiedad BorderStyle de bsGradientLabel1.

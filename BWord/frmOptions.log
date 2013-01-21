@@ -1,0 +1,2 @@
+Línea 59: la clase RichTextLib.RichTextBox del control rtfSample no era una clase de control cargada.
+Línea 105: la clase MSComctlLib.TabStrip del control tbrOptions no era una clase de control cargada.

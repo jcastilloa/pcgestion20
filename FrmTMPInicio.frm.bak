@@ -1,0 +1,369 @@
+VERSION 5.00
+Object = "{5D394841-A03C-4C69-B77E-9FF0515D973E}#1.0#0"; "bsGradientLabel.ocx"
+Object = "{40BB6FED-6467-4158-A329-96573D1DCC3D}#1.0#0"; "GrdBttn.ocx"
+Begin VB.Form frmTMPInicio 
+   BackColor       =   &H00FCAA8B&
+   Caption         =   "Inicio Temporal"
+   ClientHeight    =   3510
+   ClientLeft      =   60
+   ClientTop       =   390
+   ClientWidth     =   5745
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   3510
+   ScaleWidth      =   5745
+   StartUpPosition =   3  'Windows Default
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn2 
+      Height          =   645
+      Left            =   3585
+      TabIndex        =   1
+      Top             =   2370
+      Width           =   1935
+      _ExtentX        =   3413
+      _ExtentY        =   1138
+      Caption         =   "Maestro/Detalles"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":0000
+   End
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn1 
+      Height          =   1590
+      Left            =   3195
+      TabIndex        =   0
+      Top             =   105
+      Width           =   2415
+      _ExtentX        =   4260
+      _ExtentY        =   2805
+      Caption         =   "GrdBttn1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":001C
+   End
+   Begin PCGestion.bsGradientLabel bsGradientLabel1 
+      Height          =   405
+      Left            =   3210
+      Top             =   1725
+      Width           =   2025
+      _ExtentX        =   3572
+      _ExtentY        =   714
+      BeginProperty Fount {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin serGrdBttn.ucGrdBttn FWCoolButton1 
+      Height          =   510
+      Left            =   45
+      TabIndex        =   2
+      Top             =   2400
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   900
+      Caption         =   "Formas Pago"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":759E
+   End
+   Begin serGrdBttn.ucGrdBttn FWCoolButton3 
+      Height          =   525
+      Left            =   45
+      TabIndex        =   3
+      Top             =   2940
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   926
+      Caption         =   "Sectores"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":75BA
+   End
+   Begin serGrdBttn.ucGrdBttn cbprov 
+      Height          =   555
+      Left            =   60
+      TabIndex        =   4
+      Top             =   90
+      Width           =   1455
+      _ExtentX        =   2566
+      _ExtentY        =   979
+      Caption         =   "Proveedores"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":75D6
+   End
+   Begin serGrdBttn.ucGrdBttn cbSec 
+      Height          =   555
+      Left            =   45
+      TabIndex        =   5
+      Top             =   660
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "Secciones"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":75F2
+   End
+   Begin serGrdBttn.ucGrdBttn cbFam 
+      Height          =   555
+      Left            =   45
+      TabIndex        =   6
+      Top             =   1245
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "Familias"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":760E
+   End
+   Begin serGrdBttn.ucGrdBttn cbSfm 
+      Height          =   555
+      Left            =   45
+      TabIndex        =   7
+      Top             =   1830
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "SubFamilias"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":762A
+   End
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn3 
+      Height          =   555
+      Left            =   1545
+      TabIndex        =   8
+      Top             =   1245
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "Articulos"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":7646
+   End
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn4 
+      Height          =   555
+      Left            =   1530
+      TabIndex        =   9
+      Top             =   1830
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "Formas Cobro"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":7662
+   End
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn5 
+      Height          =   555
+      Left            =   1545
+      TabIndex        =   10
+      Top             =   90
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "IVA"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":767E
+   End
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn6 
+      Height          =   555
+      Left            =   1545
+      TabIndex        =   11
+      Top             =   660
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   979
+      Caption         =   "Temporadas"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":769A
+   End
+   Begin serGrdBttn.ucGrdBttn ucGrdBttn7 
+      Height          =   510
+      Left            =   1530
+      TabIndex        =   12
+      Top             =   2400
+      Width           =   1470
+      _ExtentX        =   2593
+      _ExtentY        =   900
+      Caption         =   "Empresas"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Trebuchet MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Image           =   "FrmTMPInicio.frx":76B6
+   End
+End
+Attribute VB_Name = "FrmTMPInicio"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+Option Explicit
+
+
+Private Sub cbProv_click()
+
+FrmMntProv.Show
+
+End Sub
+
+Private Sub cbfam_click()
+
+FrmMntFam.Show
+
+End Sub
+
+Private Sub cbsec_click()
+
+FrmMntSec.Show
+
+End Sub
+
+Private Sub cbSfm_click()
+
+FrmMntSfm.Show
+
+End Sub
+
+
+
+Private Sub FWCoolButton1_click()
+
+FrmMntFpa.Show
+
+End Sub
+
+
+
+Private Sub FWCoolButton3_click()
+
+frmMntSct.Show
+
+End Sub
+
+
+Private Sub ucGrdBttn1_Click()
+Plantilla.Show
+End Sub
+
+Private Sub ucGrdBttn2_Click()
+TmpMaDet.Show
+End Sub
+
+Private Sub ucGrdBttn3_Click()
+FrmMntArt.Show
+End Sub
+
+Private Sub ucGrdBttn4_Click()
+frmMntFco.Show
+End Sub
+
+Private Sub ucGrdBttn5_Click()
+frmMntIva.Show
+End Sub
+
+Private Sub ucGrdBttn6_Click()
+frmMntTem.Show
+End Sub
+
+Private Sub ucGrdBttn7_Click()
+frmMntEmp.Show
+End Sub
